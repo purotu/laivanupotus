@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laivanupotus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/rules.js" defer></script>
+    <script src="js/board.js" defer></script>
+    <script src="js/computer.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Laivanupotus</h1>
+        <p id="status">Tervetuloa pelaamaan!</p>
+
+        <div id="placement-controls">
+            <h2>Sijoita laivasi</h2>
+            <p id="ship-info"></p>
+
+            <button id="rotate-button">
+                Käännä laiva
+            </button>
+
+            <button id="random-button">
+                Sijoita satunnaisesti
+            </button>
+        </div>
+
+        <button id="new-game-button">
+            Uusi peli
+        </button>
+
+        <div class="boards">
+            <section>
+                <h2>Oma laivasto</h2>
+                <div id="player-board" class="board"></div>
+            </section>
+
+            <section>
+                <h2>Tietokoneen laivasto</h2>
+                <div id="computer-board" class="board"></div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

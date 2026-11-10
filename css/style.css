@@ -1,0 +1,140 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #102238;
+  color: white;
+  text-align: center;
+}
+
+main {
+  padding: 30px 15px;
+}
+
+.boards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 32px);
+  gap: 3px;
+}
+
+.cell {
+  width: 32px;
+  height: 32px;
+  background: #4c9ac2;
+  border: 1px solid #a8d9ed;
+  border-radius: 3px;
+}
+
+#computer-board .cell:hover {
+  background: #83cce9;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .board {
+    grid-template-columns: repeat(10, 27px);
+  }
+
+  .cell {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+
+#placement-controls {
+  margin: 20px auto;
+}
+
+button {
+  background: #237bb0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 18px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #329bd7;
+}
+
+.cell.ship {
+  background: #64748b;
+}
+
+.cell.preview {
+  background: #77c779;
+}
+
+.cell.invalid {
+  background: #dc6666;
+}
+
+#player-board .cell {
+  cursor: pointer;
+}
+
+
+/* Osumat ja hudit */
+.cell.hit,
+.cell.hit:hover {
+  background: #e74c3c !important;
+}
+
+.cell.miss,
+.cell.miss:hover {
+  background: #b8d9e8 !important;
+}
+
+.cell.hit::after {
+  content: "✕";
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.cell.miss::after {
+  content: "•";
+  color: #397b9c;
+  font-size: 22px;
+}
+
+/* Upotettu laiva */
+.cell.sunk,
+.cell.sunk:hover {
+  background: #7f1d1d !important;
+}
+
+/* Pelin aikana */
+.board.disabled {
+  pointer-events: none;
+}
+
+#status {
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 28px;
+}
+
+#new-game-button {
+  background: #16a34a;
+}
+
+#new-game-button:hover {
+  background: #15803d;
+}
+
